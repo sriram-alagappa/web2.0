@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="bower_components\angular\angular.js"></script>
+</head>
+<body ng-app>
+
+
+
+
+</br> <hr> step1 <hr> </br>
+
+{{2+2}}
+
+</br> <hr> step2  <hr></br>
+
+<input type="text" ng-model="name"/> {{name}}
+
+
+</br> <hr> step3  <hr></br>
+
+<div ng-init="names=['sree','deep','rithya']">
+
+    <ui>
+        <li ng-repeat="name in names">{{name}}</li>
+    </ui>
+</div>
+
+</br> <hr> step4  <hr></br>
+
+<div ng-init="fnames=['c++','Java','c#']">
+        <input type="text" ng-model="nameFilter"/>
+        <li ng-repeat="names in fnames |filter:nameFilter">{{names}}</li>
+
+</div>
+
+</br> <hr> step5  <hr></br>
+<div ng-controller="myController">
+        {{name}}
+</div>
+
+<script>
+    function myController($scope){
+        $scope.name= "sriram";
+    }
+</script>
+
+
+</body>
+</html>
