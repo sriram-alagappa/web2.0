@@ -37,13 +37,15 @@
 
     sriramApp.config(function($routeProvider){
         $routeProvider
-                .when('/view1',{
+                .when('/',{
                         templateUrl:'View1.html',
                         controller:'sriramController'
                       })
                  .when('/view2',{
                     templateUrl:'View2.html',
                     controller:'sriramController'
+                }).otherwise({
+                    redirectTo: '/'
                 });
 
 
